@@ -15,7 +15,7 @@ A aplicação permite:
 
 ```text
 .
-├── storage/
+├── data/
   └── terefas.json
 ├── main.py
 ├── gui.py
