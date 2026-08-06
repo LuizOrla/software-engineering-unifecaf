@@ -1,4 +1,4 @@
-name: Testes Automatizados NiceGUI
+name: Testes Automatizados (GUI & Storage)
 
 on:
   push:
@@ -26,8 +26,10 @@ jobs:
 
     - name: Instalar Navegadores do Playwright
       run: |
+        # Instala o navegador Chromium headless necessário para testar o NiceGUI
         python -m playwright install --with-deps chromium
 
-    - name: Executar os testes de Interface
+    - name: Executar todos os testes (Storage e GUI)
       run: |
+        # Executa o pytest rodando a interface em segundo plano
         pytest --headless
