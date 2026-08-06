@@ -59,3 +59,23 @@ Após iniciar a aplicação, abra o navegador no endereço informado pelo NiceGU
 ## Autor
 Luiz Orlando
 Desenvolvido como projeto de estudo da disciplina Software Engineering, do curso Análise e Desenvolvimento de Sistemas.
+
+# V2
+A segunda versão da aplicação contará com Projetos, que terão tarefas atreladas a si.
+Esta adição conta com uma nova configuração de arquivos, tendo um arquivo adicional para salvamento de Projetos. As tarefas possuirão IDs de Projeto atreladas, para recuperação e exibição.
+
+A nova estrutura contará com:
+```text
+.
+├── data/
+  └── terefas.json
+  └── projetos.json
+├── main.py
+├── gui.py
+├── storage.py
+├── config.py
+├── requirements.txt
+└── README.md
+```
+
+A interface GUI contará com apresentação de projeto e descrição no corpo da aplicação, e com uma listagem de Projetos na barra lateral.
