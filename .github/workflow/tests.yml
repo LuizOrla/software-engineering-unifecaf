@@ -1,0 +1,33 @@
+name: Testes Automatizados NiceGUI
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Baixar o código do repositório
+      uses: actions/checkout@v4
+
+    - name: Configurar o Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Instalar dependências do Python
+      run: |
+        python -m pip install --upgrade pip
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+    - name: Instalar Navegadores do Playwright
+      run: |
+        python -m playwright install --with-deps chromium
+
+    - name: Executar os testes de Interface
+      run: |
+        pytest --headless
