@@ -25,4 +25,4 @@ jobs:
     - name: Executar todos os testes (Storage e GUI)
       run: |
         # Executa o pytest rodando a interface em segundo plano
-        pytest --headless
+        pytest
