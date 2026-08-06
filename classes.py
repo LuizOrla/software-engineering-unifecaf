@@ -1,4 +1,29 @@
-# Arquivo de classes principais
+# Arquivo de classes principais de projeto
+
+class Projeto: # Objeto Projeto, que cria dicionário relativo ao projeto para salvamento
+    """
+    Estrutura do dicionário:
+    ```
+    dict_projeto = {
+        id_projeto: {
+            "titulo": Nome do Projeto,
+            "descricao": Descrição do Projeto
+        }
+    }
+    """
+    def __init__(self, id, titulo, descricao): # Função inicializadora, com titulo, descrição e ID
+        self.id = id
+        self.titulo = titulo
+        self.descricao = descricao
+
+    def dicionario_projeto(self): # Função que cria entrada em dicionário
+        id_dict = self.id
+        dict = {
+            "titulo": self.titulo,
+            "descricao": self.descricao
+        }
+        return id_dict, dict
+
 class Tarefa:
     '''
     Estrutura do dicionário:
