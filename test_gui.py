@@ -9,7 +9,7 @@ import config
 def setup_interface():
     # Limpa as páginas anteriores do NiceGUI antes do teste
     from nicegui import context
-    context.get_client().layout.clear()
+    context.client.layout.clear()
     
     # Inicializa os dicionários do seu arquivo config para não quebrar a renderização
     config.dict_projetos = {}
