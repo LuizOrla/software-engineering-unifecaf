@@ -7,10 +7,7 @@ import config
 # Configura uma fixture para montar a interface antes de cada teste
 @pytest.fixture(autouse=True)
 def setup_interface():
-    # Limpa as páginas anteriores do NiceGUI antes do teste
-    from nicegui import context
-    context.client.layout.clear()
-    
+  
     # Inicializa os dicionários do seu arquivo config para não quebrar a renderização
     config.dict_projetos = {}
     config.dict_tarefas = {}
